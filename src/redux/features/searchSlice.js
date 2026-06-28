@@ -13,21 +13,21 @@ export const searchSlice = createSlice({
 
   reducers: {
     setQuery(state, action) {
-      state.query = action.pay;
+      state.query = action.payload;
     },
     setActiveTabs(state, action) {
-      state.activeTab = action.pay;
+      state.activeTab = action.payload;
     },
     setResults(state, action) {
       state.loding = false;
-      state.results = action.pay;
+      state.results = action.payload;
     },
     setLoading(state, action) {
       state.loding = true;
       state.error = null;
     },
     setError(state, action) {
-      state.error = action.pay;
+      state.error = action.payload;
       state.loding = false;
     },
     clearResult(state, action) {
